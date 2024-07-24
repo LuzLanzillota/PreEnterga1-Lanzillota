@@ -7,7 +7,11 @@ const suma = (a, b) => a + b;
 const resta = (a, b) => a - b;
 const iva = i => i * 0.21;
 let descuento = 0.15;
-
+let producto1 = "MAQUILLAJE DE ILUMINADOR MASTER CHROME™ METALLIC"
+let producto2 = "BASE DE MAQUILLAJE SUPER STAY ACTIVE WEAR"
+let producto3 = "VOLUM EXPRESS®"
+let producto4 = "LASH SENSATIONAL SKY HIGH"
+let producto5 = "INSTANT AGE REWIND CORRECTOR DE TRATAMIENTO ANTIOJERAS"
 function login() {
     for (let i = 0; i < 3; i++) {
         let ingresarUsuario = prompt("Ingrese nombre de usuario");
@@ -40,10 +44,10 @@ function login() {
 function conmutador(tipo_usuario) {
 
     if (tipo_usuario === "Admin") {
-        let opcion = parseInt(prompt("Ingrese una opción: 1. Mostrar Stock, 2. Agregar Stock, 3. Agregar Producto, 4. Eliminar Producto, 5.Salir"));
+        let opcion = parseInt(prompt("Ingrese una opción: 1. Mostrar Productos, 2. Agregar Stock, 3. Agregar Producto, 4. Eliminar Producto, 5.Salir"));
         switch (opcion) {
             case 1:
-                mostarStock();
+                mostarProductos();
                 break;
             case 2:
                 agregarStock();
@@ -62,10 +66,10 @@ function conmutador(tipo_usuario) {
                 break;
         }
     } else if (tipo_usuario === "Comprador") {
-        let opcion = parseInt(prompt("Ingrese una opción: 1. Mostrar Stock, 2.Comprar, 3.Salir"));
+        let opcion = parseInt(prompt("Ingrese una opción: 1. Mostrar Productos, 2.Comprar, 3.Salir"));
         switch (opcion) {
             case 1:
-                mostarStock();
+                mostarProductos();
                 break;
             case 2:
                 precioMasIva();
@@ -79,8 +83,13 @@ function conmutador(tipo_usuario) {
         }
     }
 }
-function mostarStock() {
-    console.log("Mostrando productos");
+function mostarProductos() {
+    console.log("Mostrando productos:");
+    console.log(producto1);
+    console.log(producto2);
+    console.log(producto3);
+    console.log(producto4);
+    console.log(producto5);
 }
 function agregarStock() {
     console.log("Agregando Stock");
