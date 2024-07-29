@@ -102,7 +102,7 @@ function eliminarProducto() {
 }
 function precioMasIva() {
     let precioproducto = parseFloat(prompt("Ingrese el precio del producto que desea comprar"));
-    let descuentoAplicado = (precioproducto * descuento);
+    let descuentoAplicado = precioproducto * descuento;
     let nuevoprecio = resta(suma(precioproducto, iva(precioproducto)), descuentoAplicado);
     console.log("El total es $ " + nuevoprecio);
 }
